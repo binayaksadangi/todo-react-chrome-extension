@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: start;
+  height: 400px;
+  width: 300px;
+  background-color: #23272F;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+.heading{
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  /* border: 1px solid #fff; */
+  letter-spacing: 3px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  /* border: 1px solid #fff; */
+}
+.input{
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+.btn{
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #7289DA;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 25px;
+  border-radius: 8px;
+  color: #fff;
+  font-family:'Roboto', sans-serif ;
+  margin-right: 40px;
+  padding: 0 5px;
+  background-color: #7289DA;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+/* .list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+ 
+ 
+ 
 }
+.list{
+  
+  list-style-type: square;
+  width: 80%;
+  height: 100%;
+  /* border: 1px solid #994e4e; */
+  /* color: #fff;
+  font-family:'Roboto', sans-serif ;
+}
+.deleteBtn{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f15757;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  color: #fff;
+  font-family:'Roboto', sans-serif ;
+  margin: 5px 0;
+  padding: 0 10px;
+  background-color: #7289DA;
+} */ 
