@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import del from "./delete.png";
 
 const getTodos = () => {
   if (localStorage.getItem("todos") === null) {
@@ -44,7 +45,9 @@ function App() {
         <ul className="list-container">
           {todos.map((todo, index) => (
             <li className="list-item" key={index}>
-              {todo} <button className="delete-btn" onClick={() => deleteTodo(index)}>X</button>
+              {todo} <button className="delete-btn" onClick={() => deleteTodo(index)}>
+                <img src={del} alt="" srcset="" className="del-icon"/>
+              </button>
             </li>
           ))}
         </ul>

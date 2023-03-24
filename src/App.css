@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #23272F;
+}
 .container{
   display: flex;
   flex-direction: column;
@@ -8,7 +13,7 @@
   width: 300px;
   background-color: #23272F;
   border-radius: 10px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
 }
 .heading{
   color: #FFFFFF;
@@ -67,63 +72,25 @@
   border-radius: 8px;
   color: #fff;
   font-family:'Roboto', sans-serif ;
+  margin-bottom: 10px;
   margin-right: 40px;
   padding: 0 5px;
   background-color: #7289DA;
 }
-
-
-
-
-
-
-
-
-
-/* .list-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
- 
- 
- 
-}
-.list{
-  
-  list-style-type: square;
-  width: 80%;
-  height: 100%;
-  /* border: 1px solid #994e4e; */
-  /* color: #fff;
-  font-family:'Roboto', sans-serif ;
-}
-.deleteBtn{
-  width: 30px;
-  height: 30px;
+.delete-btn{
   border-radius: 5px;
   border: none;
-  background-color: #f15757;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  background-color: #f5f6f8;
   cursor: pointer;
-  margin: 0 10px;
+  margin-left: 10px;
 }
-.list-item{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 30px;
-  border-radius: 8px;
-  color: #fff;
-  font-family:'Roboto', sans-serif ;
-  margin: 5px 0;
-  padding: 0 10px;
-  background-color: #7289DA;
-} */ 
+.del-icon{
+  height: 18px;
+}
+
+
+
+
+
+
+
