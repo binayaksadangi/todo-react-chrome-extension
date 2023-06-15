@@ -3,13 +3,15 @@ body{
   margin: 0;
   padding: 0;
   background-color: #23272F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  height: 400px;
+  justify-content: center;
   width: 300px;
   background-color: #23272F;
   border-radius: 10px;

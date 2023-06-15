@@ -1,16 +1,38 @@
 {
-  "manifest_version": 3,
-  "name":"Todo Extension",
-  "description": "desc",
-  "version": "0.0.1",
-  "action": {
-    "default_popup": "index.html",
-    "default_title": "Todo",
-    "default_icon": "icon.png"
-  },
-  "permissions": ["scripting"],
-  "host_permissions": [
-    "http://*/",
-    "https://*/"
-  ]
-}
+    "name": "Todo",
+    "short_name": "Todo",
+    "theme_color": "#23272f",
+    "background_color": "#23272f",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": 
+    [
+        {
+          "src": "maskable.png",
+          "sizes": "182x182",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "logo192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "logo256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+        }, 
+        {
+          "src": "logo384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+        }, 
+        {
+          "src": "logo512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ]
+  }
