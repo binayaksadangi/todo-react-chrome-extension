@@ -14,7 +14,7 @@ const getTodos = () => {
 };
 
 function App() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState();
   const [todos, setTodos] = useState(getTodos());
 
   useEffect(() => {
@@ -22,9 +22,9 @@ function App() {
   }, [todos]);
   const deleteTodo = (ind) => {
     setTodos(todos.filter((todo, i) => i != ind));
-    toast.info("😥 Wow so easy!", {
+    toast.info("You deleted a task!", {
       position: "bottom-center",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -47,17 +47,32 @@ function App() {
           className="btn"
           onClick={() => {
             setTodos([...todos, input]);
-            setInput("");
-            toast.success("🦄 Wow so easy!", {
-              position: "bottom-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            });
+            console.log(todos);
+            console.log(input);
+            // setInput("");
+            if (input === "") {
+              toast.error("Cannot enter empty task", {
+                position: "bottom-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+            } else {
+              toast.success("You added a task!", {
+                position: "bottom-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+            }
           }}
         >
           +
