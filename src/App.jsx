@@ -4,6 +4,7 @@ import del from "./delete.png";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 const getTodos = () => {
   if (localStorage.getItem("todos") === null) {
     return [];
@@ -20,11 +21,12 @@ function App() {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+
   const deleteTodo = (ind) => {
-    setTodos(todos.filter((todo, i) => i != ind));
-    toast.info("😥 Wow so easy!", {
+    setTodos(todos.filter((todo, i) => i !== ind));
+    toast.info("You deleted a task!", {
       position: "bottom-center",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -33,6 +35,41 @@ function App() {
       theme: "dark",
     });
   };
+
+  const handleAddTodo = () => {
+    if (input.trim() === "") {
+      toast.error("Cannot enter empty task", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } else {
+      setTodos([...todos, input.trim()]);
+      toast.success("You added a task!", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setInput(""); // Clear input after adding todo
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleAddTodo();
+    }
+  };
+
   return (
     <div className="container">
       <h1 className="heading">Todo List</h1>
@@ -42,24 +79,9 @@ function App() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyPress={handleKeyPress} // Listen for Enter key press
         />
-        <button
-          className="btn"
-          onClick={() => {
-            setTodos([...todos, input]);
-            setInput("");
-            toast.success("🦄 Wow so easy!", {
-              position: "bottom-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            });
-          }}
-        >
+        <button className="btn" onClick={handleAddTodo}>
           +
         </button>
       </div>
@@ -68,7 +90,7 @@ function App() {
           <li className="list-item" key={index}>
             {todo}{" "}
             <button className="delete-btn" onClick={() => deleteTodo(index)}>
-              <img src={del} alt="" srcset="" className="del-icon" />
+              <img src={del} alt="" className="del-icon" />
             </button>
           </li>
         ))}
