@@ -24,7 +24,7 @@ function App() {
 
   const deleteTodo = (ind) => {
     setTodos(todos.filter((todo, i) => i !== ind));
-    toast.info("You deleted a task!", {
+    toast.info("🤭 I hope you completed it!", {
       position: "bottom-center",
       autoClose: 2000,
       hideProgressBar: false,

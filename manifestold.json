@@ -1,8 +1,8 @@
 {
-  "manifest_version": 3,
+  "manifest_version": "2",
   "name":"Todo Extension",
   "description": "desc",
-  "version": "0.0.1",
+  "version": "2.0.1",
   "action": {
     "default_popup": "index.html",
     "default_title": "Todo",
